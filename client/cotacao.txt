@@ -1,0 +1,1 @@
+Dolar: {&{%!s(*http.body=&{0xc000008018 <nil> <nil> false false {0 0} true false false <nil>}) {%!s(int32=0) %!s(uint32=0)} %!s(bool=false) %!s(*errors.errorString=&{EOF}) %!s(func(error) error=<nil>) %!s(func() error=0xaf2720)}}

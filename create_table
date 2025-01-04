@@ -1,0 +1,2 @@
+
+Create table cotacao (code varchar(50), codein varchar(50), name varchar(500), high varchar(50), low varchar(50), varBid varchar(50), pctChange varchar(50), bid varchar(50), ask varchar(50), timestamp1 varchar(50), createDate DateTime);
