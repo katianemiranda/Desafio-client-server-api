@@ -21,6 +21,12 @@ func main() {
 		panic(err)
 	}
 	defer res.Body.Close()
+
+	body, err := io.ReadAll(res.Body)
+	if err != nil {
+		panic(err)
+	}
+
 	io.Copy(os.Stdout, res.Body)
 
 	file, err := os.Create("cotacao.txt")
@@ -30,8 +36,8 @@ func main() {
 	defer file.Close()
 
 	// colocar valor correto para o dolar aqui
-	_, err = file.WriteString(fmt.Sprintf("Dolar: {%s}", res.Body))
+	_, err = file.WriteString(fmt.Sprintf("Dolar: {%s}", string(body)))
 	if err != nil {
-		fmt.Fprintf(os.Stderr, "Erro ao escrever arquivo: %\n", err)
+		fmt.Fprintf(os.Stderr, "Erro ao escrever arquivo: %\v", err)
 	}
 }
