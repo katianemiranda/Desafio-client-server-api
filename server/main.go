@@ -72,7 +72,7 @@ func BuscaCotacaoDolarHandler(w http.ResponseWriter, r *http.Request) {
 
 		// resposta da requisicao
 		json.NewEncoder(w).Encode(cotacao.USDBRL.Bid)
-		insertCotacao(db, cotacao)
+		//insertCotacao(db, cotacao)
 		//db.Create(&cotacao)
 
 	case <-ctx.Done():
