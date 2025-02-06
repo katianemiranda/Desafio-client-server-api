@@ -59,7 +59,7 @@ func BuscaCotacaoDolarHandler(w http.ResponseWriter, r *http.Request) {
 	defer log.Println("Request finalizada")
 
 	select {
-	case <-time.After(200 * time.Millisecond):
+	case <-time.After(300 * time.Millisecond):
 		cotacao, err := BuscaCotacaoDolar()
 		if err != nil {
 			w.WriteHeader(http.StatusInternalServerError)

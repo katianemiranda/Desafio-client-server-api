@@ -36,8 +36,8 @@ func main() {
 	defer file.Close()
 
 	// colocar valor correto para o dolar aqui
-	_, err = file.WriteString(fmt.Sprintf("Dolar: {%s}", string(body)))
+	_, err = file.WriteString(fmt.Sprintf("Dolar: {%v}", string(body)))
 	if err != nil {
-		fmt.Fprintf(os.Stderr, "Erro ao escrever arquivo: %\v", err)
+		fmt.Fprintf(os.Stderr, "Erro ao escrever arquivo: %v\n", err)
 	}
 }
